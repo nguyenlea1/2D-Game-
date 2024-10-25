@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD:2d-game-project/54_hotdog.png.import
-uid="uid://2k7ehggjvxii"
-path="res://.godot/imported/54_hotdog.png-4a58867d09fbdcd3054a18b08ee585a4.ctex"
-=======
-uid="uid://b3ydbmi2vescn"
+uid="uid://d4mcirenkwxku"
 path="res://.godot/imported/wrappedtrans_red.png-d7ee93106c2463988cdefe827fe523e0.ctex"
->>>>>>> dd6619f9c2e185971e3808fa5065c643ba880e33:2d-game-project/Candies/wrappedtrans_red.png.import
 metadata={
 "vram_texture": false
 }

@@ -13,7 +13,4 @@ func _process(delta: float) -> void:
 
 
 #func candy():
-	var new_candy = load("<alien>").instance()
-	new_candy.position.x = randi() % SCREEN_WIDTH
-	new_candy.position.y = randi() % SCREEN_HEIGHT
-	add_child(new_cad)
+	
