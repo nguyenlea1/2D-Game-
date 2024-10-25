@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2w6a7i7kxa32"]
+
+[ext_resource type="Texture2D" uid="uid://bvk5an7ixtqsd" path="res://Alien-1.png" id="1_gjwus"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_du5rf"]
+radius = 46.0
+height = 92.0
+
+[node name="Alien" type="Area2D"]
+position = Vector2(193, 73)
+
+[node name="Alien-1" type="Sprite2D" parent="."]
+position = Vector2(303, 497)
+scale = Vector2(0.522727, 0.522727)
+texture = ExtResource("1_gjwus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(303, 498)
+shape = SubResource("CapsuleShape2D_du5rf")
