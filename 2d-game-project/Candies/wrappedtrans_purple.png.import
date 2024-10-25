@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2k7ehggjvxii"
-path="res://.godot/imported/54_hotdog.png-4a58867d09fbdcd3054a18b08ee585a4.ctex"
+uid="uid://dia7kdjkdpvgv"
+path="res://.godot/imported/wrappedtrans_purple.png-25f345b27ece28542580dbc043b1775c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://54_hotdog.png"
-dest_files=["res://.godot/imported/54_hotdog.png-4a58867d09fbdcd3054a18b08ee585a4.ctex"]
+source_file="res://Candies/wrappedtrans_purple.png"
+dest_files=["res://.godot/imported/wrappedtrans_purple.png-25f345b27ece28542580dbc043b1775c.ctex"]
 
 [params]
 

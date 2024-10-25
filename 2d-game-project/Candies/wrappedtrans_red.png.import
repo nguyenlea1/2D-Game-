@@ -2,16 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpeev0c5dtgom"
-path="res://.godot/imported/wrappedtrans_teal.png-17e19d9b2658f8fd062687655e1882f7.ctex"
+<<<<<<< HEAD:2d-game-project/54_hotdog.png.import
+uid="uid://2k7ehggjvxii"
+path="res://.godot/imported/54_hotdog.png-4a58867d09fbdcd3054a18b08ee585a4.ctex"
+=======
+uid="uid://b3ydbmi2vescn"
+path="res://.godot/imported/wrappedtrans_red.png-d7ee93106c2463988cdefe827fe523e0.ctex"
+>>>>>>> dd6619f9c2e185971e3808fa5065c643ba880e33:2d-game-project/Candies/wrappedtrans_red.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wrappedtrans_teal.png"
-dest_files=["res://.godot/imported/wrappedtrans_teal.png-17e19d9b2658f8fd062687655e1882f7.ctex"]
+source_file="res://Candies/wrappedtrans_red.png"
+dest_files=["res://.godot/imported/wrappedtrans_red.png-d7ee93106c2463988cdefe827fe523e0.ctex"]
 
 [params]
 
