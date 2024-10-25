@@ -2,16 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvk5an7ixtqsd"
-path="res://.godot/imported/Alien-1.png-91102bf74509bd8da64668b63ba960ef.ctex"
+<<<<<<< HEAD
+uid="uid://wch1x2o3my6r"
+=======
+uid="uid://d178uh4dlh5rt"
+>>>>>>> 4a376bd348b0b6adab82d55a58f2b3bc7478fe42
+path="res://.godot/imported/54_hotdog.png-4a58867d09fbdcd3054a18b08ee585a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alien-1.png"
-dest_files=["res://.godot/imported/Alien-1.png-91102bf74509bd8da64668b63ba960ef.ctex"]
+source_file="res://54_hotdog.png"
+dest_files=["res://.godot/imported/54_hotdog.png-4a58867d09fbdcd3054a18b08ee585a4.ctex"]
 
 [params]
 
