@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxrkclg0aryx8"]
+
+[ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Candy store images/StoreInterior.png" id="1_pehih"]
+
+[node name="Main Menu" type="Node2D"]
+
+[node name="StoreInterior" type="Sprite2D" parent="."]
+position = Vector2(575.5, 324.5)
+scale = Vector2(1.47809, 1.48961)
+texture = ExtResource("1_pehih")
