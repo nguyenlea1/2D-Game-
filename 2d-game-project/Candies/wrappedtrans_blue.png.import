@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvk5an7ixtqsd"
-path="res://.godot/imported/Alien-1.png-91102bf74509bd8da64668b63ba960ef.ctex"
+uid="uid://csfr17n8xcctl"
+path="res://.godot/imported/wrappedtrans_blue.png-32cd102e6ea4d74a001351bc299d77ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Alien-1.png"
-dest_files=["res://.godot/imported/Alien-1.png-91102bf74509bd8da64668b63ba960ef.ctex"]
+source_file="res://Candies/wrappedtrans_blue.png"
+dest_files=["res://.godot/imported/wrappedtrans_blue.png-32cd102e6ea4d74a001351bc299d77ed.ctex"]
 
 [params]
 

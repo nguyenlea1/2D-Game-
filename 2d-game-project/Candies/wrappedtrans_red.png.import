@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpeev0c5dtgom"
-path="res://.godot/imported/wrappedtrans_teal.png-17e19d9b2658f8fd062687655e1882f7.ctex"
+uid="uid://d4mcirenkwxku"
+path="res://.godot/imported/wrappedtrans_red.png-d7ee93106c2463988cdefe827fe523e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wrappedtrans_teal.png"
-dest_files=["res://.godot/imported/wrappedtrans_teal.png-17e19d9b2658f8fd062687655e1882f7.ctex"]
+source_file="res://Candies/wrappedtrans_red.png"
+dest_files=["res://.godot/imported/wrappedtrans_red.png-d7ee93106c2463988cdefe827fe523e0.ctex"]
 
 [params]
 
