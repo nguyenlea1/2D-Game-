@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cvm2d0vfacvuq"
+path="res://.godot/imported/balloon bounce 9.wav-324da71d5c1d717fe36315e635940210.sample"
+
+[deps]
+
+source_file="res://FilmCow Recorded SFX/balloon bounce 9.wav"
+dest_files=["res://.godot/imported/balloon bounce 9.wav-324da71d5c1d717fe36315e635940210.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
