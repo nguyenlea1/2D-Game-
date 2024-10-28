@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dw2heiso2sa0q"
+path="res://.godot/imported/balloon 7.wav-676a3000dcb8d7ba248e1d52f58dd76e.sample"
+
+[deps]
+
+source_file="res://FilmCow Recorded SFX/balloon 7.wav"
+dest_files=["res://.godot/imported/balloon 7.wav-676a3000dcb8d7ba248e1d52f58dd76e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
