@@ -5,6 +5,6 @@
 [node name="Main Menu" type="Node2D"]
 
 [node name="Frontstore" type="Sprite2D" parent="."]
-position = Vector2(565, 348)
-scale = Vector2(1.71226, 1.15337)
+position = Vector2(576.843, 324)
+scale = Vector2(2.05273, 1.32924)
 texture = ExtResource("1_kt7tk")
