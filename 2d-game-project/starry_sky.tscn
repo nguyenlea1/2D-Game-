@@ -1,26 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjotfx6kfxjju"]
+[gd_scene load_steps=3 format=3 uid="uid://cjotfx6kfxjju"]
 
 [ext_resource type="Texture2D" uid="uid://l2deavcov015" path="res://galaxy background.png" id="1_jpudg"]
 [ext_resource type="Script" path="res://continue_button.gd" id="2_cicnh"]
-[ext_resource type="Texture2D" uid="uid://rij4lr4s8ni1" path="res://Screenshot 2024-10-29 at 12.19.02 PM.jpeg" id="2_opx6m"]
 
 [node name="Node" type="Node2D"]
 
 [node name="StarrySky" type="Sprite2D" parent="."]
-position = Vector2(573.5, 326.75)
-scale = Vector2(0.50945, 0.508984)
+position = Vector2(571, 328)
+scale = Vector2(0.507253, 0.507031)
 texture = ExtResource("1_jpudg")
 
-[node name="Sprite2D" type="Sprite2D" parent="StarrySky"]
-position = Vector2(4.90726, 6.38527)
-scale = Vector2(2.00015, 2.00886)
-texture = ExtResource("2_opx6m")
-
 [node name="Label" type="Label" parent="StarrySky"]
-offset_left = -998.134
-offset_top = -278.496
-offset_right = 1134.87
-offset_bottom = 198.504
+offset_left = -1060.62
+offset_top = -309.646
+offset_right = 1072.38
+offset_bottom = 167.354
 theme_override_font_sizes/font_size = 32
 text = "Fibzi the alien had traveled light-years to explore Earth, hoping to learn about human life. But after a single taste of candy, he was hooked!
 Peering through the glass of a local candy store, he spotted rows of vibrant treats and knew he had to taste them all. 
@@ -36,10 +30,10 @@ Be careful not to let too many fall or else the store owner will notice and catc
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="StarrySky"]
-offset_left = -144.273
-offset_top = 283.408
-offset_right = 196.727
-offset_bottom = 374.408
+offset_left = -193.198
+offset_top = 321.479
+offset_right = 147.802
+offset_bottom = 412.479
 theme_override_font_sizes/font_size = 60
 text = "Continue ->"
 script = ExtResource("2_cicnh")
