@@ -2,28 +2,31 @@ extends Node2D
 
 @export var blue_candy: PackedScene
 @export var green_candy: PackedScene
+@export var pink_candy: PackedScene
+@export var taco_food: PackedScene
+
+var items = []  # Array to hold different items
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$StartDelayTimer.start() # Wait for delay after start button press
+	items.append(blue_candy)
+	items.append(green_candy)
+	items.append(pink_candy)
+	items.append(taco_food)
+	#$StartDelayTimer.start() # Wait for delay after start button press
 	
 # Function triggered when StartDelayTimer finishes
-func _on_start_delay_timer_timeout() -> void:
-	print("StartDelayTimer has timed out! Starting SpawnTimer...")
+#func _on_start_delay_timer_timeout() -> void:
 	$SpawnTimer.start() #Starts the spawning timer
 	
-#spawns candy
+#spawns candy/food
 func on_SpawnTimer_timeout() -> void:
-	spawn_candy() #calls candy spawning function 
+	#Selects random item from the array
+	var item_type = items[randi() % items.size()]  # Get a random item type (candy or food)
+	var item = item_type.instantiate()
 	
-func spawn_candy() -> void:
-	var candy  # Declare the candy variable
-	if randf() < 0.5:
-		candy = blue_candy.instantiate()  # Instantiate blue candy
-	else:
-		candy = green_candy.instantiate()  # Instantiate green candy
 	var screen_width = get_viewport_rect().size.x
-	var candy_width = 88  # Adjust this to your candy sprite width
-	candy.position.x = clamp(randf() * screen_width, candy_width / 2, screen_width - candy_width / 2)
-	candy.position.y = 0
-	add_child(candy)  # Add the candy to the scene
+	var item_width = 88  # sprite width
+	item.position.x = clamp(randf() * screen_width, item_width / 2, screen_width - item_width / 2)
+	item.position.y = 0
+	add_child(item)  # Add the candy to the scene

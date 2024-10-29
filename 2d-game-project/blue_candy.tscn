@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ihckc"]
 radius = 41.5933
 
-[node name="Candy" type="Area2D" groups=["candies"]]
+[node name="BlueCandy" type="Area2D" groups=["candies"]]
 collision_mask = 2
 script = ExtResource("1_ufggs")
 
@@ -18,5 +18,4 @@ texture = ExtResource("1_rak8n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ihckc")
 
-[connection signal="body_entered" from="." to="." method="_on_Candy_body_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 200.0  # Max speed of the alien
 
 func _ready() -> void:
-	add_to_group("aliens")
+	add_to_group("alien")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

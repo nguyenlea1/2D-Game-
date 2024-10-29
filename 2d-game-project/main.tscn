@@ -1,17 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=8 format=3 uid="uid://clihluudomxhj"]
 
 [ext_resource type="Script" path="res://spawning.gd" id="1_6jlds"]
 [ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://b3nhlxi2m8go5" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Candy store images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
+[ext_resource type="PackedScene" uid="uid://crrwy4ulpnxpr" path="res://taco_food.tscn" id="4_oxuj5"]
+[ext_resource type="PackedScene" uid="uid://uu0j6njgdjhx" path="res://pink_candy.tscn" id="4_uuvck"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6jlds")
 blue_candy = ExtResource("2_e6exv")
 green_candy = ExtResource("2_k3hn0")
+pink_candy = ExtResource("4_uuvck")
+taco_food = ExtResource("4_oxuj5")
 
 [node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 3.0
 
 [node name="StoreInterior" type="Sprite2D" parent="."]
 position = Vector2(575, 328)
@@ -20,11 +25,6 @@ texture = ExtResource("2_n3pj2")
 
 [node name="Player" parent="." instance=ExtResource("3_t3agp")]
 collision_layer = 1
-
-[node name="Candy" parent="." instance=ExtResource("2_e6exv")]
-position = Vector2(550, 550)
-
-[node name="GreenCandy" parent="." instance=ExtResource("2_k3hn0")]
 
 [node name="StartDelayTimer" type="Timer" parent="."]
 one_shot = true

@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_pe6mc"]
 radius = 42.0476
 
-[node name="GreenCandy" type="Area2D"]
+[node name="GreenCandy" type="Area2D" groups=["candies"]]
 script = ExtResource("1_omtn3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
