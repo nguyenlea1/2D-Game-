@@ -13,10 +13,6 @@ func _ready() -> void:
 	items.append(green_candy)
 	items.append(pink_candy)
 	items.append(taco_food)
-	#$StartDelayTimer.start() # Wait for delay after start button press
-	
-# Function triggered when StartDelayTimer finishes
-#func _on_start_delay_timer_timeout() -> void:
 	$SpawnTimer.start() #Starts the spawning timer
 	
 #spawns candy/food
