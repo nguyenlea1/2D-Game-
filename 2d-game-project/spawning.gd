@@ -3,7 +3,7 @@ extends Node2D
 @export var blue_candy: PackedScene
 @export var green_candy: PackedScene
 @export var pink_candy: PackedScene
-@export var taco_food: PackedScene
+@export var empty_wrapper: PackedScene
 
 @export var lives = 3
 
@@ -15,7 +15,7 @@ func _ready() -> void:
 	items.append(blue_candy)
 	items.append(green_candy)
 	items.append(pink_candy)
-	items.append(taco_food)
+	items.append(empty_wrapper)
 	$SpawnTimer.start() #Starts the spawning timer
 	
 # Call this function each time a taco collision happens

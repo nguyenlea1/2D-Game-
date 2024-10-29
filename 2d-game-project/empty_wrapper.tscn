@@ -1,17 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://crrwy4ulpnxpr"]
 
-[ext_resource type="Script" path="res://taco_falling.gd" id="1_atdfo"]
-[ext_resource type="Texture2D" uid="uid://duu5sevo5t120" path="res://Ghostpixxells_pixelfood/99_taco.png" id="1_gp5uy"]
+[ext_resource type="Script" path="res://empty_wrapper_falling.gd" id="1_atdfo"]
+[ext_resource type="Texture2D" uid="uid://dh88l1kffgvuj" path="res://Candies/emptycandy.png" id="2_4oc22"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vawwv"]
-radius = 20.8806
+radius = 57.5587
 
-[node name="Taco" type="Area2D" groups=["non_candy"]]
+[node name="EmptyWrapper" type="Area2D" groups=["non_candy"]]
 script = ExtResource("1_atdfo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2, 2)
-texture = ExtResource("1_gp5uy")
+position = Vector2(1.00002, 3.99998)
+scale = Vector2(0.322695, 0.297872)
+texture = ExtResource("2_4oc22")
 
 [node name="Area2D" type="Area2D" parent="." groups=["non_candy"]]
 
