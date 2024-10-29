@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bur6aqq5xdnlw"
-path="res://.godot/imported/emptycandy.png-d00a3fc56d143ee4f8d6c931d2243e65.ctex"
+uid="uid://cunl02svxbwia"
+path="res://.godot/imported/Yes_Or_No.png-7e69ba969438af5c101ef50f1207ccde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Candies/emptycandy.png"
-dest_files=["res://.godot/imported/emptycandy.png-d00a3fc56d143ee4f8d6c931d2243e65.ctex"]
+source_file="res://Game Over/Yes_Or_No.png"
+dest_files=["res://.godot/imported/Yes_Or_No.png-7e69ba969438af5c101ef50f1207ccde.ctex"]
 
 [params]
 

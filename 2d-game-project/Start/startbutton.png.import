@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bur6aqq5xdnlw"
-path="res://.godot/imported/emptycandy.png-d00a3fc56d143ee4f8d6c931d2243e65.ctex"
+uid="uid://cm2ea8w3256ax"
+path="res://.godot/imported/startbutton.png-0eb26bf87baf400653e78db363db2449.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Candies/emptycandy.png"
-dest_files=["res://.godot/imported/emptycandy.png-d00a3fc56d143ee4f8d6c931d2243e65.ctex"]
+source_file="res://Start/startbutton.png"
+dest_files=["res://.godot/imported/startbutton.png-0eb26bf87baf400653e78db363db2449.ctex"]
 
 [params]
 
