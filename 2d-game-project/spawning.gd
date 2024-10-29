@@ -4,10 +4,10 @@ extends Node2D
 @export var green_candy: PackedScene
 @export var pink_candy: PackedScene
 @export var empty_wrapper: PackedScene
-@export var score: int = 0
+
+@export var lives = 3
 
 var items = []  # Array to hold different items
-@export var lives = 3
 @onready var heart_sprites = [$Heart, $Heart2, $Heart3]
 
 # Called when the node enters the scene tree for the first time.
@@ -52,7 +52,3 @@ func update_hearts() -> void:
 	$Heart.set_grayscale(lives < 3)
 	$Heart2.set_grayscale(lives < 2)
 	$Heart3.set_grayscale(lives < 1)
-	
-func update_score(points: int) -> void:
-	score += points
-	$ScoreLabel.text = "Score: %d" % score

@@ -14,12 +14,12 @@ func _process(delta: float) -> void:
 	
 	# Check if the candy reaches the bottom of the screen
 	if position.y > get_viewport_rect().size.y:
+		var main_game = get_tree().root.get_node("Main")
+		if main_game: # Check if main node is set
+			main_game.lose_life()  # Calls lose life when the candy falls off screen
 		queue_free()  # Remove candy
 
 # Function to handle collisions with the alien
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("alien"):
-		var main_game = get_tree().root.get_node("Main")
-		if main_game:
-			main_game.lose_life()
 		queue_free()
