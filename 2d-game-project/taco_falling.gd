@@ -15,4 +15,7 @@ func _process(delta: float) -> void:
 # Function to handle collisions with the alien
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("alien"):
+		var main_game = get_tree().root.get_node("Main")
+		if main_game:
+			main_game.lose_life()
 		queue_free()

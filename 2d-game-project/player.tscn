@@ -10,6 +10,7 @@ radius = 100.623
 position = Vector2(550, 550)
 collision_layer = 2
 script = ExtResource("1_ghoft")
+speed = 400.0
 
 [node name="Alien" type="Sprite2D" parent="."]
 texture = ExtResource("2_8i611")

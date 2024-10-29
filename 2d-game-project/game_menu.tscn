@@ -22,7 +22,7 @@ offset_top = 454.0
 offset_right = 723.0
 offset_bottom = 513.0
 theme = SubResource("Theme_ytnbq")
-text = "Welcome! Come inside!"
+text = "We're open! Come inside!"
 script = ExtResource("2_8j5ff")
 
 [node name="button click" type="AudioStreamPlayer2D" parent="EnterStoreButton"]

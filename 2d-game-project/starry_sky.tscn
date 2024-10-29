@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjotfx6kfxjju"]
+
+[ext_resource type="Texture2D" uid="uid://bx8vcda6n06ah" path="res://Candy store images/blackScreen.png" id="1_vex04"]
+[ext_resource type="Script" path="res://continue_button.gd" id="2_cicnh"]
+
+[node name="Node" type="Node2D"]
+
+[node name="BlackScreen" type="Sprite2D" parent="."]
+position = Vector2(580, 325)
+scale = Vector2(1.35198, 1.48387)
+texture = ExtResource("1_vex04")
+
+[node name="Label" type="Label" parent="BlackScreen"]
+offset_left = -340.241
+offset_top = -117.261
+offset_right = 2668.76
+offset_bottom = 87.7391
+text = "Fibzi the alien had traveled light-years to explore Earth, hoping to learn about human life. 
+But after a single taste of candy, he was hooked! Peering through the glass of a local candy 
+store, he spotted rows of vibrant treats and knew he had to taste them all. With a mischievous
+grin, Fibzi creeps into the candy store, ready to eat up every last out-of-this-world sugary
+delight Earth has to offer.
+
+Help Fibzi catch as much falling candy as possible. Be careful not to let too many fall or else
+the store owner will notice and catch Fibzi!
+"
+
+[node name="Button" type="Button" parent="BlackScreen"]
+offset_left = -84.3207
+offset_top = 99.7391
+offset_right = 64.6793
+offset_bottom = 130.739
+text = "Continue ->"
+script = ExtResource("2_cicnh")
+
+[connection signal="pressed" from="BlackScreen/Button" to="BlackScreen/Button" method="_on_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=9 format=3 uid="uid://clihluudomxhj"]
 
 [ext_resource type="Script" path="res://spawning.gd" id="1_6jlds"]
 [ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
 [ext_resource type="PackedScene" uid="uid://crrwy4ulpnxpr" path="res://taco_food.tscn" id="4_oxuj5"]
 [ext_resource type="PackedScene" uid="uid://uu0j6njgdjhx" path="res://pink_candy.tscn" id="4_uuvck"]
+[ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_6jlds")
@@ -29,6 +30,15 @@ collision_layer = 1
 [node name="StartDelayTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
+
+[node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(297, 74)
+
+[node name="Heart2" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(183, 72)
+
+[node name="Heart3" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(71, 70)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
 [connection signal="timeout" from="StartDelayTimer" to="." method="_on_start_delay_timer_timeout"]

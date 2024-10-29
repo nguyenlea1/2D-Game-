@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://duu5sevo5t120" path="res://Ghostpixxells_pixelfood/99_taco.png" id="1_gp5uy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vawwv"]
+radius = 20.8806
 
 [node name="Taco" type="Area2D" groups=["non_candy"]]
 script = ExtResource("1_atdfo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
 texture = ExtResource("1_gp5uy")
 
 [node name="Area2D" type="Area2D" parent="." groups=["non_candy"]]
