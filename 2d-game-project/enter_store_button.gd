@@ -1,4 +1,5 @@
 extends Button
+@onready var audio = $AudioStreamPlayer2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +12,8 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_pressed() -> void:
+func _on_pressed():
+	audio.play()
 	get_tree().change_scene_to_file("res://starry_sky.tscn")
 	
 
