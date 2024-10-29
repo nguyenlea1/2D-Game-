@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2gjlso4b5onf"]
+[gd_scene load_steps=5 format=3 uid="uid://c2gjlso4b5onf"]
 
 [ext_resource type="Texture2D" uid="uid://rtpaorq6alnh" path="res://Candy store images/frontstore.jpg" id="1_my75a"]
 [ext_resource type="Script" path="res://enter_store_button.gd" id="2_8j5ff"]
+[ext_resource type="AudioStream" uid="uid://d1b57yph85wc6" path="res://FilmCow Recorded SFX/specific sounds/game-start-6104.mp3" id="3_tvipc"]
+
+[sub_resource type="Theme" id="Theme_ytnbq"]
+default_font_size = 22
+Button/colors/font_color = Color(0.87451, 0.815686, 0.87451, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.517647, 0.992157, 1)
 
 [node name="Main Menu" type="Node2D"]
 
@@ -11,11 +17,16 @@ scale = Vector2(2.04263, 1.32515)
 texture = ExtResource("1_my75a")
 
 [node name="EnterStoreButton" type="Button" parent="."]
-offset_left = 474.0
-offset_top = 446.0
-offset_right = 688.0
-offset_bottom = 505.0
+offset_left = 436.0
+offset_top = 454.0
+offset_right = 723.0
+offset_bottom = 513.0
+theme = SubResource("Theme_ytnbq")
 text = "Welcome! Come inside!"
 script = ExtResource("2_8j5ff")
+
+[node name="button click" type="AudioStreamPlayer2D" parent="EnterStoreButton"]
+position = Vector2(-436, -454)
+stream = ExtResource("3_tvipc")
 
 [connection signal="pressed" from="EnterStoreButton" to="EnterStoreButton" method="_on_pressed"]
