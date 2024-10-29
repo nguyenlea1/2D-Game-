@@ -23,9 +23,9 @@ offset_top = 454.0
 offset_right = 723.0
 offset_bottom = 513.0
 theme = SubResource("Theme_ytnbq")
-text = "We're open! Come inside!"
+text = "Let's Play!"
 
-[node name="button click" type="AudioStreamPlayer2D" parent="."]
+[node name="buttonClick" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tvipc")
 volume_db = 12.876
 
