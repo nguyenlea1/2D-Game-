@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c81qn7wwrfjpv"]
+[gd_scene load_steps=3 format=3 uid="uid://cdqsctcvcj1tw"]
 
-[ext_resource type="Texture2D" uid="uid://chh27rh72aav0" path="res://Alien-1.png" id="1_r5cq7"]
+[ext_resource type="Texture2D" uid="uid://bvk5an7ixtqsd" path="res://Alien-1.png" id="1_r5cq7"]
 [ext_resource type="Script" path="res://alien.gd" id="2_7eulu"]
 
 [node name="Node2D" type="Node2D"]
