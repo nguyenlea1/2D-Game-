@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://du6iq4prfdkvt"
-path="res://.godot/imported/KarmaFuture.ttf-1bd6d75c5287839a07ac1b9bef7e1af8.fontdata"
+uid="uid://clyudt6bav0gj"
+path="res://.godot/imported/8bitOperatorPlusSC-Regular.ttf-87efa5ca1e3f9d9acf8b88b4d5a94a04.fontdata"
 
 [deps]
 
-source_file="res://Fonts/KarmaFuture.ttf"
-dest_files=["res://.godot/imported/KarmaFuture.ttf-1bd6d75c5287839a07ac1b9bef7e1af8.fontdata"]
+source_file="res://Fonts/8-bit-operator/8bitOperatorPlusSC-Regular.ttf"
+dest_files=["res://.godot/imported/8bitOperatorPlusSC-Regular.ttf-87efa5ca1e3f9d9acf8b88b4d5a94a04.fontdata"]
 
 [params]
 

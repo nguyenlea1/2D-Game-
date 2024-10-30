@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2gjlso4b5onf"]
 
 [ext_resource type="Script" path="res://game_menu_sound.gd" id="1_5lkp6"]
-[ext_resource type="Texture2D" uid="uid://rtpaorq6alnh" path="res://Candy store images/frontstore.jpg" id="1_my75a"]
+[ext_resource type="Texture2D" uid="uid://rtpaorq6alnh" path="res://Background images/frontstore.jpg" id="1_my75a"]
 [ext_resource type="AudioStream" uid="uid://d1b57yph85wc6" path="res://FilmCow Recorded SFX/specific sounds/game-start-6104.mp3" id="3_tvipc"]
 
 [sub_resource type="Theme" id="Theme_ytnbq"]

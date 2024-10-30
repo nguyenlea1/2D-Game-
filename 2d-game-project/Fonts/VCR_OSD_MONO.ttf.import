@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://du6iq4prfdkvt"
-path="res://.godot/imported/KarmaFuture.ttf-1bd6d75c5287839a07ac1b9bef7e1af8.fontdata"
+uid="uid://b2gl1mh77025x"
+path="res://.godot/imported/VCR_OSD_MONO.ttf-edab48c96a0a290061857a11111b02a5.fontdata"
 
 [deps]
 
-source_file="res://Fonts/KarmaFuture.ttf"
-dest_files=["res://.godot/imported/KarmaFuture.ttf-1bd6d75c5287839a07ac1b9bef7e1af8.fontdata"]
+source_file="res://Fonts/VCR_OSD_MONO.ttf"
+dest_files=["res://.godot/imported/VCR_OSD_MONO.ttf-edab48c96a0a290061857a11111b02a5.fontdata"]
 
 [params]
 
