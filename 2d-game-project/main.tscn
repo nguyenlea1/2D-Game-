@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=11 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
-[ext_resource type="PackedScene" uid="uid://b3nhlxi2m8go5" path="res://green_candy.tscn" id="2_k3hn0"]
+[ext_resource type="PackedScene" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
 [ext_resource type="PackedScene" uid="uid://crrwy4ulpnxpr" path="res://empty_wrapper.tscn" id="4_oxuj5"]
-[ext_resource type="PackedScene" uid="uid://uu0j6njgdjhx" path="res://pink_candy.tscn" id="4_uuvck"]
+[ext_resource type="PackedScene" path="res://pink_candy.tscn" id="4_uuvck"]
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
+[ext_resource type="Texture2D" uid="uid://cnlaxbra6mf31" path="res://Store-Message/message.png" id="8_qymwg"]
+[ext_resource type="Script" path="res://message.gd" id="9_rnwek"]
 
 [sub_resource type="GDScript" id="GDScript_ev4nl"]
 script/source = "extends Node2D
@@ -73,7 +75,7 @@ empty_wrapper = ExtResource("4_oxuj5")
 wait_time = 3.0
 
 [node name="StoreInterior" type="Sprite2D" parent="."]
-position = Vector2(575, 328)
+position = Vector2(560, 328)
 scale = Vector2(1.48582, 1.5127)
 texture = ExtResource("2_n3pj2")
 
@@ -83,22 +85,45 @@ autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 992.0
-offset_top = 19.0
-offset_right = 1053.0
-offset_bottom = 42.0
+offset_top = 40.0
+offset_right = 1105.0
+offset_bottom = 82.0
+scale = Vector2(0.7, 0.7)
 theme_override_font_sizes/font_size = 30
 text = "Score: 0"
 
 [node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(224, 69)
+position = Vector2(192, 64)
+scale = Vector2(0.7, 0.7)
 
 [node name="Heart2" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(142, 67)
+position = Vector2(128, 64)
+scale = Vector2(0.7, 0.7)
 
 [node name="Heart3" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(58, 61)
+position = Vector2(64, 64)
+scale = Vector2(0.7, 0.7)
 
 [node name="Player" parent="." instance=ExtResource("3_t3agp")]
 
+[node name="Message" type="Sprite2D" parent="."]
+position = Vector2(560, 200)
+scale = Vector2(1.53443, 1.53443)
+texture = ExtResource("8_qymwg")
+script = ExtResource("9_rnwek")
+
+[node name="Timer" type="Timer" parent="Message"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Label" type="Label" parent="Message"]
+offset_left = -99.7113
+offset_top = 28.0234
+offset_right = 114.289
+offset_bottom = 129.023
+text = "To play, press the < and >
+buttons on your keyboard. "
+
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
 [connection signal="timeout" from="StartDelayTimer" to="." method="_on_start_delay_timer_timeout"]
+[connection signal="timeout" from="Message/Timer" to="Message" method="_on_timer_timeout"]
