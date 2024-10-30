@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dl6vkv3511v7o"]
+[gd_scene load_steps=3 format=3 uid="uid://dl6vkv3511v7o"]
 
 [ext_resource type="Script" path="res://control_functionality.gd" id="1_12dlr"]
+[ext_resource type="Texture2D" uid="uid://bd722fiyjuxat" path="res://Game Over/gameover-alien.png" id="2_2cn3q"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -28,5 +29,10 @@ offset_top = 341.0
 offset_right = 646.0
 offset_bottom = 372.0
 text = "Play Again"
+
+[node name="Gameover-alien" type="Sprite2D" parent="."]
+position = Vector2(596, 527)
+scale = Vector2(0.254902, 0.254902)
+texture = ExtResource("2_2cn3q")
 
 [connection signal="pressed" from="RetryButton" to="." method="_on_retry_button_pressed"]
