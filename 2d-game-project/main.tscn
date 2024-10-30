@@ -1,6 +1,5 @@
 [gd_scene load_steps=9 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="Script" path="res://spawning.gd" id="1_6jlds"]
 [ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://b3nhlxi2m8go5" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
@@ -9,8 +8,62 @@
 [ext_resource type="PackedScene" uid="uid://uu0j6njgdjhx" path="res://pink_candy.tscn" id="4_uuvck"]
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
 
-[node name="Main" type="Node2D"]
-script = ExtResource("1_6jlds")
+[sub_resource type="GDScript" id="GDScript_ev4nl"]
+script/source = "extends Node2D
+
+@export var blue_candy: PackedScene
+@export var green_candy: PackedScene
+@export var pink_candy: PackedScene
+@export var empty_wrapper: PackedScene
+@export var score: int = 0
+
+var items = []  # Array to hold different items
+@export var lives = 3
+@onready var hearts = [$Heart, $Heart2, $Heart3]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	items.append(blue_candy)
+	items.append(green_candy)
+	items.append(pink_candy)
+	items.append(empty_wrapper)
+	$SpawnTimer.start() #Starts the spawning timer
+	
+# Game Over handling
+func game_over() -> void:
+	$SpawnTimer.stop()
+	$Player.set_process(false) 
+	# Load the Game Over scene
+	var game_over_scene = preload(\"res://GameOverPage.tscn\").instantiate()
+	get_tree().current_scene.add_child(game_over_scene)
+	
+#spawns candy/food
+func on_SpawnTimer_timeout() -> void:
+	#Selects random item from the array
+	var item_type = items[randi() % items.size()]  # Get a random item type (candy or food)
+	var item = item_type.instantiate()
+	
+	var screen_width = get_viewport_rect().size.x # Size of screen
+	var item_width = 88  # sprite width
+	item.position.x = clamp(randf() * screen_width, item_width / 2, screen_width - item_width / 2) # Keep sprites within screen size
+	item.position.y = 0
+	add_child(item)  # Add the candy to the scene
+	
+# Call this function each time a taco collision happens
+func lose_life() -> void:
+	if lives > 0:
+		lives -= 1
+		hearts[lives].grey_scale()
+	if lives == 0:
+		game_over()  # Call your game over logic here
+	
+func update_score(points: int) -> void:
+	score += points
+	$ScoreLabel.text = \"Score: %d\" % score
+"
+
+[node name="Main" type="Node2D" groups=["game_manager"]]
+script = SubResource("GDScript_ev4nl")
 blue_candy = ExtResource("2_e6exv")
 green_candy = ExtResource("2_k3hn0")
 pink_candy = ExtResource("4_uuvck")
@@ -24,26 +77,9 @@ position = Vector2(575, 328)
 scale = Vector2(1.48582, 1.5127)
 texture = ExtResource("2_n3pj2")
 
-[node name="Player" parent="." instance=ExtResource("3_t3agp")]
-collision_layer = 1
-script = null
-
 [node name="StartDelayTimer" type="Timer" parent="."]
 one_shot = true
 autostart = true
-
-[node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
-<<<<<<< HEAD
-position = Vector2(191, 70)
-script = null
-
-[node name="Heart2" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(122, 71)
-script = null
-
-[node name="Heart3" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(53, 72)
-script = null
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 992.0
@@ -52,15 +88,17 @@ offset_right = 1053.0
 offset_bottom = 42.0
 theme_override_font_sizes/font_size = 30
 text = "Score: 0"
-=======
-position = Vector2(297, 74)
+
+[node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
+position = Vector2(224, 69)
 
 [node name="Heart2" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(183, 72)
+position = Vector2(142, 67)
 
 [node name="Heart3" parent="." instance=ExtResource("8_gmaj6")]
-position = Vector2(71, 70)
->>>>>>> parent of 5630bd5 (implemented score counter)
+position = Vector2(58, 61)
+
+[node name="Player" parent="." instance=ExtResource("3_t3agp")]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
 [connection signal="timeout" from="StartDelayTimer" to="." method="_on_start_delay_timer_timeout"]
