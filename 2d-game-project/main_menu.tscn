@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bfl2aj0s23mwf"]
 
-[ext_resource type="Texture2D" uid="uid://rtpaorq6alnh" path="res://Candy store images/frontstore.jpg" id="1_kt7tk"]
+[ext_resource type="Texture2D" uid="uid://rtpaorq6alnh" path="res://Background images/frontstore.jpg" id="1_kt7tk"]
 
 [node name="Main Menu" type="Node2D"]
 
