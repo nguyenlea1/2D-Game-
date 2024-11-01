@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f38mxnldv1id"
-path="res://.godot/imported/StartScene.png-93170889012f17b27a7122f874b73f57.ctex"
+uid="uid://bd722fiyjuxat"
+path="res://.godot/imported/gameover-alien.png-704f5f93d35121197ea45bfe41bed053.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Start buttons/StartScene.png"
-dest_files=["res://.godot/imported/StartScene.png-93170889012f17b27a7122f874b73f57.ctex"]
+source_file="res://Gameover Images/gameover-alien.png"
+dest_files=["res://.godot/imported/gameover-alien.png-704f5f93d35121197ea45bfe41bed053.ctex"]
 
 [params]
 
