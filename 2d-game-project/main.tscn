@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
-[ext_resource type="PackedScene" path="res://empty_wrapper.tscn" id="4_oxuj5"]
+[ext_resource type="PackedScene" uid="uid://crrwy4ulpnxpr" path="res://empty_wrapper.tscn" id="4_oxuj5"]
 [ext_resource type="PackedScene" uid="uid://lpo67ytbp3t5" path="res://pink_candy.tscn" id="4_uuvck"]
 [ext_resource type="FontFile" uid="uid://du6iq4prfdkvt" path="res://Fonts/KarmaFuture.ttf" id="6_fdowf"]
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
