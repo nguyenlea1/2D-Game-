@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjotfx6kfxjju"]
+[gd_scene load_steps=4 format=3 uid="uid://cjotfx6kfxjju"]
 
 [ext_resource type="Texture2D" uid="uid://l2deavcov015" path="res://galaxy background.png" id="1_jpudg"]
 [ext_resource type="Script" path="res://continue_button.gd" id="2_cicnh"]
+[ext_resource type="Texture2D" uid="uid://bjjugqwgqtau0" path="res://nextbutton.png" id="2_q1cm7"]
 
 [node name="Node" type="Node2D"]
 
@@ -30,12 +31,14 @@ Be careful not to let too many fall or else the store owner will notice and catc
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="StarrySky"]
-offset_left = -193.198
-offset_top = 321.479
-offset_right = 147.802
-offset_bottom = 412.479
+offset_left = -92.656
+offset_top = 258.367
+offset_right = 248.344
+offset_bottom = 349.367
+scale = Vector2(1.5, 1.5)
 theme_override_font_sizes/font_size = 60
-text = "Continue ->"
+icon = ExtResource("2_q1cm7")
+flat = true
 script = ExtResource("2_cicnh")
 
 [connection signal="pressed" from="StarrySky/Button" to="StarrySky/Button" method="_on_pressed"]

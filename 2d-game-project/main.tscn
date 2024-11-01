@@ -18,6 +18,9 @@ script/source = "extends Node2D
 @export var pink_candy: PackedScene
 @export var empty_wrapper: PackedScene
 @export var score: int = 0
+@export var initial_spawn_interval: float = 4.0   # Starting spawn interval in seconds
+@export var min_spawn_interval: float = 0.5       # Minimum spawn interval limit
+@export var spawn_interval_reduction: float = 0.5 # Amount to reduce the interval each time
 
 var items = []  # Array to hold different items
 @export var lives = 3
@@ -29,14 +32,16 @@ func _ready() -> void:
 	items.append(green_candy)
 	items.append(pink_candy)
 	items.append(empty_wrapper)
+	$SpawnTimer.wait_time = initial_spawn_interval
 	$SpawnTimer.start() #Starts the spawning timer
+	$SpawnIncreaseTimer.start()
 	
 # Game Over handling
 func game_over() -> void:
 	$SpawnTimer.stop()
 	$Player.set_process(false) 
 	# Load the Game Over scene
-	get_tree().change_scene_to_file(\"res://Gameover - Nayellis/gameover.tscn\")
+	get_tree().change_scene_to_file(\"res://Gameover - Nayellis/gameover2.tscn\")
 	#game_over_scene.set_final_score(score)
 	
 #spawns candy/food
@@ -62,6 +67,12 @@ func lose_life() -> void:
 func update_score(points: int) -> void:
 	score += points
 	$ScoreLabel.text = \"Score: %d\" % score
+
+
+func _on_spawn_increase_timer_timeout() -> void:
+	if $SpawnTimer.wait_time > min_spawn_interval:
+		$SpawnTimer.wait_time = max(min_spawn_interval, $SpawnTimer.wait_time - spawn_interval_reduction)
+		print(\"New SpawnTimer interval:\", $SpawnTimer.wait_time)
 "
 
 [node name="Main" type="Node2D" groups=["game_manager"]]
@@ -72,16 +83,12 @@ pink_candy = ExtResource("4_uuvck")
 empty_wrapper = ExtResource("4_oxuj5")
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 
 [node name="StoreInterior" type="Sprite2D" parent="."]
 position = Vector2(580.602, 320.25)
 scale = Vector2(1.50283, 1.53002)
 texture = ExtResource("2_n3pj2")
-
-[node name="StartDelayTimer" type="Timer" parent="."]
-one_shot = true
-autostart = true
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 992.0
@@ -124,6 +131,10 @@ offset_bottom = 129.023
 text = "To play, press the < and >
 buttons on your keyboard. "
 
+[node name="SpawnIncreaseTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
-[connection signal="timeout" from="StartDelayTimer" to="." method="_on_start_delay_timer_timeout"]
 [connection signal="timeout" from="Message/Timer" to="Message" method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnIncreaseTimer" to="." method="_on_spawn_increase_timer_timeout"]

@@ -1,26 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2gjlso4b5onf"]
+[gd_scene load_steps=5 format=3 uid="uid://c2gjlso4b5onf"]
 
 [ext_resource type="Script" path="res://game_menu_sound.gd" id="1_5lkp6"]
 [ext_resource type="Texture2D" uid="uid://rtpaorq6alnh" path="res://Background images/frontstore.jpg" id="1_my75a"]
 [ext_resource type="AudioStream" uid="uid://d1b57yph85wc6" path="res://FilmCow Recorded SFX/specific sounds/game-start-6104.mp3" id="3_tvipc"]
-
-[sub_resource type="FontFile" id="FontFile_7pnbu"]
-cache/0/22/0/ascent = 0.0
-cache/0/22/0/descent = 0.0
-cache/0/22/0/underline_position = 0.0
-cache/0/22/0/underline_thickness = 0.0
-cache/0/22/0/scale = 1.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-
-[sub_resource type="Theme" id="Theme_ytnbq"]
-default_font = SubResource("FontFile_7pnbu")
-default_font_size = 22
-Button/colors/font_color = Color(0.87451, 0.815686, 0.87451, 1)
-Button/colors/font_hover_color = Color(0.94902, 0.517647, 0.992157, 1)
+[ext_resource type="Texture2D" uid="uid://cm2ea8w3256ax" path="res://Start Scene (Background) + Next Button/startbutton.png" id="4_xkj5h"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_5lkp6")
@@ -30,16 +13,16 @@ position = Vector2(572.5, 323)
 scale = Vector2(2.05861, 1.32515)
 texture = ExtResource("1_my75a")
 
-[node name="EnterStoreButton" type="Button" parent="."]
-offset_left = 436.0
-offset_top = 454.0
-offset_right = 723.0
-offset_bottom = 513.0
-theme = SubResource("Theme_ytnbq")
-text = "Let's Play!"
-
 [node name="buttonClick" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tvipc")
 volume_db = 12.876
 
-[connection signal="pressed" from="EnterStoreButton" to="." method="_on_enter_store_button_pressed"]
+[node name="Startbutton" type="Button" parent="."]
+offset_left = 499.0
+offset_top = 452.0
+offset_right = 661.0
+offset_bottom = 531.0
+icon = ExtResource("4_xkj5h")
+flat = true
+
+[connection signal="pressed" from="Startbutton" to="." method="_on_startbutton_pressed"]
