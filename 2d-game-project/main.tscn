@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=12 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
 [ext_resource type="PackedScene" uid="uid://crrwy4ulpnxpr" path="res://empty_wrapper.tscn" id="4_oxuj5"]
 [ext_resource type="PackedScene" uid="uid://lpo67ytbp3t5" path="res://pink_candy.tscn" id="4_uuvck"]
+[ext_resource type="FontFile" uid="uid://du6iq4prfdkvt" path="res://Fonts/KarmaFuture.ttf" id="6_fdowf"]
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
 [ext_resource type="Texture2D" uid="uid://cnlaxbra6mf31" path="res://Store-Message/message.png" id="8_qymwg"]
 [ext_resource type="Script" path="res://message.gd" id="9_rnwek"]
@@ -18,6 +19,9 @@ script/source = "extends Node2D
 @export var pink_candy: PackedScene
 @export var empty_wrapper: PackedScene
 @export var score: int = 0
+@export var initial_spawn_interval: float = 4.0   # Starting spawn interval in seconds
+@export var min_spawn_interval: float = 0.8       # Minimum spawn interval limit
+@export var spawn_interval_reduction: float = 0.5 # Amount to reduce the interval each time
 
 var items = []  # Array to hold different items
 @export var lives = 3
@@ -29,14 +33,16 @@ func _ready() -> void:
 	items.append(green_candy)
 	items.append(pink_candy)
 	items.append(empty_wrapper)
+	$SpawnTimer.wait_time = initial_spawn_interval
 	$SpawnTimer.start() #Starts the spawning timer
+	$SpawnIncreaseTimer.start()
 	
 # Game Over handling
 func game_over() -> void:
 	$SpawnTimer.stop()
 	$Player.set_process(false) 
 	# Load the Game Over scene
-	get_tree().change_scene_to_file(\"res://Gameover - Nayellis/gameover.tscn\")
+	get_tree().change_scene_to_file(\"res://Gameover - Nayellis/gameover2.tscn\")
 	#game_over_scene.set_final_score(score)
 	
 #spawns candy/food
@@ -62,6 +68,12 @@ func lose_life() -> void:
 func update_score(points: int) -> void:
 	score += points
 	$ScoreLabel.text = \"Score: %d\" % score
+
+
+func _on_spawn_increase_timer_timeout() -> void:
+	if $SpawnTimer.wait_time > min_spawn_interval:
+		$SpawnTimer.wait_time = max(min_spawn_interval, $SpawnTimer.wait_time - spawn_interval_reduction)
+		#print(\"New SpawnTimer interval:\", $SpawnTimer.wait_time)
 "
 
 [node name="Main" type="Node2D" groups=["game_manager"]]
@@ -72,24 +84,21 @@ pink_candy = ExtResource("4_uuvck")
 empty_wrapper = ExtResource("4_oxuj5")
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 
 [node name="StoreInterior" type="Sprite2D" parent="."]
 position = Vector2(580.602, 320.25)
 scale = Vector2(1.50283, 1.53002)
 texture = ExtResource("2_n3pj2")
 
-[node name="StartDelayTimer" type="Timer" parent="."]
-one_shot = true
-autostart = true
-
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 992.0
-offset_top = 40.0
-offset_right = 1105.0
-offset_bottom = 82.0
+offset_left = 952.0
+offset_top = 32.0
+offset_right = 1125.0
+offset_bottom = 85.0
 scale = Vector2(0.7, 0.7)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("6_fdowf")
+theme_override_font_sizes/font_size = 40
 text = "Score: 0"
 
 [node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
@@ -113,17 +122,23 @@ texture = ExtResource("8_qymwg")
 script = ExtResource("9_rnwek")
 
 [node name="Timer" type="Timer" parent="Message"]
-wait_time = 3.0
+wait_time = 2.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Message"]
-offset_left = -99.7113
+offset_left = -110.79
 offset_top = 28.0234
-offset_right = 114.289
-offset_bottom = 129.023
-text = "To play, press the < and >
+offset_right = 112.21
+offset_bottom = 117.023
+theme_override_colors/font_color = Color(0.996078, 0.25098, 0.529412, 1)
+theme_override_font_sizes/font_size = 17
+text = "To play, press the ← and →
 buttons on your keyboard. "
 
+[node name="SpawnIncreaseTimer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
-[connection signal="timeout" from="StartDelayTimer" to="." method="_on_start_delay_timer_timeout"]
 [connection signal="timeout" from="Message/Timer" to="Message" method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnIncreaseTimer" to="." method="_on_spawn_increase_timer_timeout"]

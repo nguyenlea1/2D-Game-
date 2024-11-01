@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dflitu0r1fb5a"
-path="res://.godot/imported/startbutton2.png-e799140ac676e7636257f17794a2e87d.ctex"
+uid="uid://dpiqwgdq4kfqk"
+path="res://.godot/imported/yes.png-3ebd028cd03899408ff353ffadda3753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Start buttons/startbutton2.png"
-dest_files=["res://.godot/imported/startbutton2.png-e799140ac676e7636257f17794a2e87d.ctex"]
+source_file="res://Gameover Images/yes.png"
+dest_files=["res://.godot/imported/yes.png-3ebd028cd03899408ff353ffadda3753.ctex"]
 
 [params]
 

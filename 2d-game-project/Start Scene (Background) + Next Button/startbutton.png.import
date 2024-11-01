@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1t61f3nrumy0"
-path="res://.godot/imported/Game_Over.png-19390a18209f628a3f0120e70f721dcf.ctex"
+uid="uid://cm2ea8w3256ax"
+path="res://.godot/imported/startbutton.png-5081ed79e56d6340335cd3fa9ea20987.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game Over/Game_Over.png"
-dest_files=["res://.godot/imported/Game_Over.png-19390a18209f628a3f0120e70f721dcf.ctex"]
+source_file="res://Start Scene (Background) + Next Button/startbutton.png"
+dest_files=["res://.godot/imported/startbutton.png-5081ed79e56d6340335cd3fa9ea20987.ctex"]
 
 [params]
 
