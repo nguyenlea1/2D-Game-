@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbbpwwewgqxwm"]
 
-[ext_resource type="Texture2D" uid="uid://b516gr1elgbhs" path="res://Background images/gameover background.webp" id="1_d7xel"]
+[ext_resource type="Texture2D" uid="uid://byfri7g1y4s7i" path="res://Background images/gameover background.webp" id="1_d7xel"]
 [ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Game Over/gameover.png" id="2_00qam"]
 [ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Game Over/Play_Again.png" id="3_gieui"]
 [ext_resource type="Texture2D" uid="uid://bpq7fdr5g32dl" path="res://Game Over/gameoveralien.png" id="3_rqa08"]
