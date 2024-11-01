@@ -124,10 +124,12 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Message"]
-offset_left = -99.7113
+offset_left = -110.79
 offset_top = 28.0234
-offset_right = 114.289
-offset_bottom = 129.023
+offset_right = 112.21
+offset_bottom = 117.023
+theme_override_colors/font_color = Color(0.996078, 0.25098, 0.529412, 1)
+theme_override_font_sizes/font_size = 17
 text = "To play, press the ← and →
 buttons on your keyboard. "
 
