@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f38mxnldv1id"
-path="res://.godot/imported/StartScene.png-f067246ec2d9f43bb6818a18b66739d2.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://dbwpc70kyuoex"
+valid=false
 
 [deps]
 
-source_file="res://Start/StartScene.png"
-dest_files=["res://.godot/imported/StartScene.png-f067246ec2d9f43bb6818a18b66739d2.ctex"]
+source_file="res://Background images/blue gameover background.jpg"
 
 [params]
 
