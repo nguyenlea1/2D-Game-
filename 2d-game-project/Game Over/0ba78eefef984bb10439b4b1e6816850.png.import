@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cex23rwini1ui"
-valid=false
+uid="uid://cpo04w8uqm2kh"
+path="res://.godot/imported/0ba78eefef984bb10439b4b1e6816850.png-f7d212a1e0f0d582fedac55118740b2b.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Background images/blue gameover background.jpg"
+source_file="res://Game Over/0ba78eefef984bb10439b4b1e6816850.png"
+dest_files=["res://.godot/imported/0ba78eefef984bb10439b4b1e6816850.png-f7d212a1e0f0d582fedac55118740b2b.ctex"]
 
 [params]
 
