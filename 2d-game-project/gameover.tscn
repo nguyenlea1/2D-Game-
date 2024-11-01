@@ -1,5 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dbbpwwewgqxwm"]
 
+<<<<<<< HEAD:2d-game-project/gameover.tscn
 [ext_resource type="Texture2D" uid="uid://chca2xcqvwabt" path="res://Background images/gameover background.webp" id="1_kbpc7"]
 [ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Gameover Images/gameover.png" id="2_ri387"]
 [ext_resource type="Texture2D" uid="uid://bpq7fdr5g32dl" path="res://Gameover Images/gameoveralien.png" id="3_7y0cb"]
@@ -7,6 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://bh354fdm3nmtg" path="res://Gameover Images/No.png" id="5_0pdt7"]
 [ext_resource type="Script" path="res://texture_button.gd" id="6_va6kx"]
 [ext_resource type="Texture2D" uid="uid://dpiqwgdq4kfqk" path="res://Gameover Images/yes.png" id="7_lxv4n"]
+=======
+[ext_resource type="Texture2D" uid="uid://b516gr1elgbhs" path="res://Background images/gameover background.webp" id="1_d7xel"]
+[ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Game Over/gameover.png" id="2_00qam"]
+[ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Game Over/Play_Again.png" id="3_gieui"]
+[ext_resource type="Texture2D" uid="uid://bpq7fdr5g32dl" path="res://Game Over/gameoveralien.png" id="3_rqa08"]
+[ext_resource type="Texture2D" uid="uid://bh354fdm3nmtg" path="res://Game Over/No.png" id="4_b0ky1"]
+[ext_resource type="Script" path="res://Gameover - Nayellis/no.gd" id="5_mi1wu"]
+[ext_resource type="Texture2D" uid="uid://dpiqwgdq4kfqk" path="res://Game Over/yes.png" id="5_n4ml1"]
+[ext_resource type="Script" path="res://Gameover - Nayellis/yes.gd" id="7_fw0be"]
+>>>>>>> f48ddf6441f21bcbc50cdf3665c6e7e72310d53b:2d-game-project/Gameover - Nayellis/gameover.tscn
 
 [node name="gameover" type="Node2D"]
 
