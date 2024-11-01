@@ -13,8 +13,8 @@ Button/colors/font_hover_color = Color(0.94902, 0.517647, 0.992157, 1)
 script = ExtResource("1_5lkp6")
 
 [node name="Frontstore" type="Sprite2D" parent="."]
-position = Vector2(577, 323)
-scale = Vector2(2.04263, 1.32515)
+position = Vector2(572.5, 323)
+scale = Vector2(2.05861, 1.32515)
 texture = ExtResource("1_my75a")
 
 [node name="EnterStoreButton" type="Button" parent="."]
