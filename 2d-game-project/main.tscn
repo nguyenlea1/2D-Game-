@@ -19,7 +19,7 @@ script/source = "extends Node2D
 @export var empty_wrapper: PackedScene
 @export var score: int = 0
 @export var initial_spawn_interval: float = 4.0   # Starting spawn interval in seconds
-@export var min_spawn_interval: float = 0.5       # Minimum spawn interval limit
+@export var min_spawn_interval: float = 0.8       # Minimum spawn interval limit
 @export var spawn_interval_reduction: float = 0.5 # Amount to reduce the interval each time
 
 var items = []  # Array to hold different items
@@ -72,7 +72,7 @@ func update_score(points: int) -> void:
 func _on_spawn_increase_timer_timeout() -> void:
 	if $SpawnTimer.wait_time > min_spawn_interval:
 		$SpawnTimer.wait_time = max(min_spawn_interval, $SpawnTimer.wait_time - spawn_interval_reduction)
-		print(\"New SpawnTimer interval:\", $SpawnTimer.wait_time)
+		#print(\"New SpawnTimer interval:\", $SpawnTimer.wait_time)
 "
 
 [node name="Main" type="Node2D" groups=["game_manager"]]
