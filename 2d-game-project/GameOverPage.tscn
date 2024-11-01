@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=3 uid="uid://dl6vkv3511v7o"]
 
 [ext_resource type="Script" path="res://control_functionality.gd" id="1_12dlr"]
@@ -5,6 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Game Over/gameover.png" id="3_e1y7f"]
 [ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Game Over/Play_Again.png" id="4_uijp7"]
 [ext_resource type="Texture2D" uid="uid://cunl02svxbwia" path="res://Game Over/Yes_Or_No.png" id="5_3r6hx"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://c0x6bmfvoh821"]
+
+[ext_resource type="Script" path="res://control_functionality.gd" id="1_12dlr"]
+[ext_resource type="Texture2D" uid="uid://b1t61f3nrumy0" path="res://Game Over/Game_Over.png" id="2_w6t3i"]
+[ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Game Over/Play_Again.png" id="3_7adlu"]
+>>>>>>> e52d8d703b05eb2cb420c9e8133bb21a380b0fd0
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -13,8 +21,27 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_12dlr")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 287.0
+offset_right = 777.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Oh no! The store owner caught Fibzi!
+
+Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+position = Vector2(164, -82)
+texture = ExtResource("2_w6t3i")
+
 [node name="RetryButton" type="Button" parent="."]
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = 960.0
 offset_top = 400.0
 offset_right = 1048.0
@@ -30,6 +57,14 @@ texture = ExtResource("2_2cn3q")
 position = Vector2(576, 200)
 scale = Vector2(1.32936, 1.32936)
 texture = ExtResource("3_e1y7f")
+=======
+offset_left = 398.0
+offset_top = 367.0
+offset_right = 861.0
+offset_bottom = 459.0
+icon = ExtResource("3_7adlu")
+flat = true
+>>>>>>> e52d8d703b05eb2cb420c9e8133bb21a380b0fd0
 
 [node name="PlayAgain" type="Sprite2D" parent="."]
 position = Vector2(560, 288)
