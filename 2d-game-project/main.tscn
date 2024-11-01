@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=12 format=3 uid="uid://clihluudomxhj"]
 
 [ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
 [ext_resource type="PackedScene" path="res://empty_wrapper.tscn" id="4_oxuj5"]
 [ext_resource type="PackedScene" uid="uid://lpo67ytbp3t5" path="res://pink_candy.tscn" id="4_uuvck"]
+[ext_resource type="FontFile" uid="uid://du6iq4prfdkvt" path="res://Fonts/KarmaFuture.ttf" id="6_fdowf"]
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
 [ext_resource type="Texture2D" uid="uid://cnlaxbra6mf31" path="res://Store-Message/message.png" id="8_qymwg"]
 [ext_resource type="Script" path="res://message.gd" id="9_rnwek"]
@@ -91,12 +92,13 @@ scale = Vector2(1.50283, 1.53002)
 texture = ExtResource("2_n3pj2")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 992.0
-offset_top = 40.0
-offset_right = 1105.0
-offset_bottom = 82.0
+offset_left = 955.0
+offset_top = 41.0
+offset_right = 1128.0
+offset_bottom = 94.0
 scale = Vector2(0.7, 0.7)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("6_fdowf")
+theme_override_font_sizes/font_size = 40
 text = "Score: 0"
 
 [node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
