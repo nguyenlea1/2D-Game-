@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbbpwwewgqxwm"]
+
+[ext_resource type="Texture2D" uid="uid://chca2xcqvwabt" path="res://Background images/gameover background.webp" id="1_kbpc7"]
+[ext_resource type="Texture2D" uid="uid://dep3w34w0skfv" path="res://Gameover Images/gameover.png" id="2_ri387"]
+[ext_resource type="Texture2D" uid="uid://bpq7fdr5g32dl" path="res://Gameover Images/gameoveralien.png" id="3_7y0cb"]
+[ext_resource type="Texture2D" uid="uid://sui7ol27qbs0" path="res://Gameover Images/Play_Again.png" id="4_rxun7"]
+[ext_resource type="Texture2D" uid="uid://bh354fdm3nmtg" path="res://Gameover Images/No.png" id="5_0pdt7"]
+[ext_resource type="Script" path="res://texture_button.gd" id="6_va6kx"]
+[ext_resource type="Texture2D" uid="uid://dpiqwgdq4kfqk" path="res://Gameover Images/yes.png" id="7_lxv4n"]
+
+[node name="gameover" type="Node2D"]
+
+[node name="GameoverBackground" type="Sprite2D" parent="."]
+position = Vector2(565.667, 315.5)
+scale = Vector2(2.44074, 2.44074)
+texture = ExtResource("1_kbpc7")
+
+[node name="Gameover" type="Sprite2D" parent="."]
+position = Vector2(584, 160)
+texture = ExtResource("2_ri387")
+
+[node name="Gameoveralien" type="Sprite2D" parent="."]
+position = Vector2(595, 511)
+scale = Vector2(1.10116, 1.10116)
+texture = ExtResource("3_7y0cb")
+
+[node name="PlayAgain" type="Sprite2D" parent="."]
+position = Vector2(584, 256)
+scale = Vector2(0.571429, 0.571429)
+texture = ExtResource("4_rxun7")
+
+[node name="No" type="Sprite2D" parent="."]
+position = Vector2(641.37, 315.125)
+scale = Vector2(0.361111, 0.361111)
+texture = ExtResource("5_0pdt7")
+
+[node name="TextureButton" type="TextureButton" parent="No"]
+anchors_preset = -1
+anchor_left = -12.742
+anchor_top = -10.111
+anchor_right = -12.742
+anchor_bottom = -10.111
+offset_left = 1923.57
+offset_top = 953.06
+offset_right = 2115.19
+offset_bottom = 1075.56
+script = ExtResource("6_va6kx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Yes" type="Sprite2D" parent="."]
+position = Vector2(518, 316)
+scale = Vector2(0.338384, 0.338384)
+texture = ExtResource("7_lxv4n")
+
+[node name="TextureButton" type="TextureButton" parent="Yes"]
+anchors_preset = -1
+anchor_left = -6.365
+anchor_top = -8.933
+anchor_right = -6.365
+anchor_bottom = -8.933
+offset_left = 1307.4
+offset_top = 778.367
+offset_right = 1558.4
+offset_bottom = 961.367
+script = ExtResource("6_va6kx")
+
+[connection signal="pressed" from="No/TextureButton" to="No/TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="Yes/TextureButton" to="Yes/TextureButton" method="_on_pressed"]
