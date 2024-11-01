@@ -35,6 +35,7 @@ func game_over() -> void:
 	$Player.set_process(false) 
 	# Load the Game Over scene
 	var game_over_scene = preload(\"res://GameOverPage.tscn\").instantiate()
+	game_over_scene.set_final_score(score)
 	get_tree().current_scene.add_child(game_over_scene)
 	
 #spawns candy/food
