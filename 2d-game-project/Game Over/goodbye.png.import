@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwvot4dgdj7lv"
-valid=false
+uid="uid://d10csu31bds08"
+path="res://.godot/imported/goodbye.png-1cd7d00f6b221478c400477c76bb25bd.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Background images/blue gameover background.jpg"
+source_file="res://Game Over/goodbye.png"
+dest_files=["res://.godot/imported/goodbye.png-1cd7d00f6b221478c400477c76bb25bd.ctex"]
 
 [params]
 
