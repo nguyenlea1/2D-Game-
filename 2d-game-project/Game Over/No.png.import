@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bduf07vxviqi0"
-path="res://.godot/imported/gameover background.webp-454b45dafc44d63a40c6bbbb28703087.ctex"
+uid="uid://bh354fdm3nmtg"
+path="res://.godot/imported/No.png-be7ad939e9b7e619315451e08333e292.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background images/gameover background.webp"
-dest_files=["res://.godot/imported/gameover background.webp-454b45dafc44d63a40c6bbbb28703087.ctex"]
+source_file="res://Game Over/No.png"
+dest_files=["res://.godot/imported/No.png-be7ad939e9b7e619315451e08333e292.ctex"]
 
 [params]
 
