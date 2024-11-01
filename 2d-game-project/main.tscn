@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=12 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
 [ext_resource type="PackedScene" uid="uid://crrwy4ulpnxpr" path="res://empty_wrapper.tscn" id="4_oxuj5"]
 [ext_resource type="PackedScene" uid="uid://lpo67ytbp3t5" path="res://pink_candy.tscn" id="4_uuvck"]
+[ext_resource type="FontFile" uid="uid://du6iq4prfdkvt" path="res://Fonts/KarmaFuture.ttf" id="6_fdowf"]
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
 [ext_resource type="Texture2D" uid="uid://cnlaxbra6mf31" path="res://Store-Message/message.png" id="8_qymwg"]
 [ext_resource type="Script" path="res://message.gd" id="9_rnwek"]
@@ -91,12 +92,13 @@ scale = Vector2(1.50283, 1.53002)
 texture = ExtResource("2_n3pj2")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 992.0
-offset_top = 40.0
-offset_right = 1105.0
-offset_bottom = 82.0
+offset_left = 952.0
+offset_top = 32.0
+offset_right = 1125.0
+offset_bottom = 85.0
 scale = Vector2(0.7, 0.7)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("6_fdowf")
+theme_override_font_sizes/font_size = 40
 text = "Score: 0"
 
 [node name="Heart" parent="." instance=ExtResource("8_gmaj6")]
@@ -124,10 +126,12 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Label" type="Label" parent="Message"]
-offset_left = -99.7113
+offset_left = -110.79
 offset_top = 28.0234
-offset_right = 114.289
-offset_bottom = 129.023
+offset_right = 112.21
+offset_bottom = 117.023
+theme_override_colors/font_color = Color(0.996078, 0.25098, 0.529412, 1)
+theme_override_font_sizes/font_size = 17
 text = "To play, press the ← and →
 buttons on your keyboard. "
 
