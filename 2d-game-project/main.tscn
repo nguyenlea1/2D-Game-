@@ -1,6 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://clihluudomxhj"]
+[gd_scene load_steps=15 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="PackedScene" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://giae6325oyo0" path="res://heart.tscn" id="8_gmaj6"]
 [ext_resource type="Texture2D" uid="uid://cnlaxbra6mf31" path="res://Store-Message/message.png" id="8_qymwg"]
 [ext_resource type="Script" path="res://message.gd" id="9_rnwek"]
+[ext_resource type="AudioStream" uid="uid://kd7xnpxm46ge" path="res://FilmCow Recorded SFX/specific sounds/life-lost-game-over-89697.mp3" id="11_6uyyr"]
+[ext_resource type="AudioStream" uid="uid://ciscjruxvlj3h" path="res://FilmCow Recorded SFX/specific sounds/collect-points-190037.mp3" id="12_kk8xh"]
+[ext_resource type="AudioStream" uid="uid://dakgjo3wvjo44" path="res://NEW sfx/background music/PLAY retro-game-music-245230 (kinda like this one more).mp3" id="13_d4uoo"]
 
 [sub_resource type="GDScript" id="GDScript_ev4nl"]
 script/source = "extends Node2D
@@ -36,6 +39,7 @@ func _ready() -> void:
 	$SpawnTimer.wait_time = initial_spawn_interval
 	$SpawnTimer.start() #Starts the spawning timer
 	$SpawnIncreaseTimer.start()
+	$GameBackgroundMusic.play()
 	
 # Game Over handling
 func game_over() -> void:
@@ -62,10 +66,12 @@ func lose_life() -> void:
 	if lives > 0:
 		lives -= 1
 		hearts[lives].grey_scale()
+		$LostLifeSound.play()
 	if lives == 0:
 		game_over()  # Call your game over logic here
 	
 func update_score(points: int) -> void:
+	$AddPointSound.play()
 	score += points
 	$ScoreLabel.text = \"Score: %d\" % score
 
@@ -139,6 +145,17 @@ buttons on your keyboard. "
 wait_time = 10.0
 autostart = true
 
+[node name="LostLifeSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_6uyyr")
+
+[node name="AddPointSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_kk8xh")
+
+[node name="GameBackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_d4uoo")
+volume_db = -6.117
+
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
 [connection signal="timeout" from="Message/Timer" to="Message" method="_on_timer_timeout"]
 [connection signal="timeout" from="SpawnIncreaseTimer" to="." method="_on_spawn_increase_timer_timeout"]
+[connection signal="child_entered_tree" from="GameBackgroundMusic" to="." method="_on_game_background_music_child_entered_tree"]
