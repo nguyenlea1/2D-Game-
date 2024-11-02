@@ -116,8 +116,8 @@ scale = Vector2(0.7, 0.7)
 [node name="Player" parent="." instance=ExtResource("3_t3agp")]
 
 [node name="Message" type="Sprite2D" parent="."]
-position = Vector2(560, 200)
-scale = Vector2(1.53443, 1.53443)
+position = Vector2(608, 160)
+scale = Vector2(1.56153, 1.56153)
 texture = ExtResource("8_qymwg")
 script = ExtResource("9_rnwek")
 
