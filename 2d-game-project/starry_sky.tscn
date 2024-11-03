@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjotfx6kfxjju"]
+[gd_scene load_steps=7 format=3 uid="uid://cjotfx6kfxjju"]
 
 [ext_resource type="Texture2D" uid="uid://l2deavcov015" path="res://galaxy background.png" id="1_jpudg"]
 [ext_resource type="Script" path="res://continue_button.gd" id="2_cicnh"]
 [ext_resource type="Texture2D" uid="uid://bjjugqwgqtau0" path="res://nextbutton.png" id="2_q1cm7"]
 [ext_resource type="FontFile" uid="uid://b2gl1mh77025x" path="res://Fonts/VCR_OSD_MONO.ttf" id="2_v1xv4"]
 [ext_resource type="AudioStream" uid="uid://bks0lpmj7nk6f" path="res://FilmCow Recorded SFX/specific sounds/menu-button-88360.mp3" id="5_lpyvs"]
+[ext_resource type="AudioStream" uid="uid://cebl5tvq24uyh" path="res://NEW sfx/background music/INTRO SCREEN puzzle-game-bright-casual-video-game-music-249202.mp3" id="6_vnrrq"]
 
 [node name="Node" type="Node2D"]
 script = ExtResource("2_cicnh")
@@ -52,6 +53,9 @@ flat = true
 
 [node name="NextButtonSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_lpyvs")
+
+[node name="IntroMusicContinued" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vnrrq")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="finished" from="NextButtonSound" to="." method="_on_next_button_sound_finished"]
