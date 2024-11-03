@@ -29,16 +29,16 @@ offset_right = 1298.96
 offset_bottom = 297.607
 theme_override_fonts/font = ExtResource("2_v1xv4")
 theme_override_font_sizes/font_size = 40
-text = "Fibzi the alien had traveled light-years to explore Earth, hoping to learn 
-about human life. But after a single taste of candy, he was hooked! Peering 
-through the glass of a local candy store, he spotted rows of vibrant treats 
-and knew he had to taste them all. With a mischievous grin, Fibzi creeps into
-the candy store, ready to eat up every last out-of-this-world sugary delight
+text = "Fibzi, the Alien, had traveled light-years to explore Earth, hoping to learn 
+about human life. But after a single taste of candy, he was hooked! 
+Peering through the glass of a local candy store, he spotted rows of vibrant treats 
+and knew he had to taste them all. Fibzi creeps into the candy store with a 
+mischievous grin, ready to eat up every last out-of-this-world sugary delight
 Earth has to offer.
 
 Help Fibzi catch as much falling candy as possible. Don't let any candy fall,
-and avoid white candy, they're empty wrappers! Be careful not to let too many 
-fall or else the store owner will notice and catch Fibzi!
+and avoid candy wrappers or you will lose a life! Be careful not to let 
+too many fall, or the store owner may notice and catch Fibzi!
 "
 horizontal_alignment = 1
 
