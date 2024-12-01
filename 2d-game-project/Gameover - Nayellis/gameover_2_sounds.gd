@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready() -> void:
+	$GameOverScore.text = "Final Score: " + str(Globals.final_score)
+	
 func _on_child_entered_tree(node: Node) -> void:
 	$GameOverSound.play()
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://clihluudomxhj"]
 
-[ext_resource type="PackedScene" uid="uid://bnvri23j1fcky" path="res://blue_candy.tscn" id="2_e6exv"]
+[ext_resource type="PackedScene" uid="uid://dlg5ytsen53ed" path="res://blue_candy.tscn" id="2_e6exv"]
 [ext_resource type="PackedScene" uid="uid://c0pdu6qw2615h" path="res://green_candy.tscn" id="2_k3hn0"]
 [ext_resource type="Texture2D" uid="uid://dblj8j6y36vs3" path="res://Background images/StoreInterior.png" id="2_n3pj2"]
 [ext_resource type="PackedScene" uid="uid://cvvlua31wand8" path="res://player.tscn" id="3_t3agp"]
@@ -23,7 +23,7 @@ script/source = "extends Node2D
 @export var empty_wrapper: PackedScene
 @export var score: int = 0
 @export var initial_spawn_interval: float = 4.0   # Starting spawn interval in seconds
-@export var min_spawn_interval: float = 0.8       # Minimum spawn interval limit
+@export var min_spawn_interval: float = 0.9       # Minimum spawn interval limit
 @export var spawn_interval_reduction: float = 0.5 # Amount to reduce the interval each time
 
 var items = []  # Array to hold different items
@@ -45,9 +45,9 @@ func _ready() -> void:
 func game_over() -> void:
 	$SpawnTimer.stop()
 	$Player.set_process(false) 
+	Globals.final_score = score
 	# Load the Game Over scene
 	get_tree().change_scene_to_file(\"res://Gameover - Nayellis/gameover2.tscn\")
-	#game_over_scene.set_final_score(score)
 	
 #spawns candy/food
 func on_SpawnTimer_timeout() -> void:
@@ -79,7 +79,6 @@ func update_score(points: int) -> void:
 func _on_spawn_increase_timer_timeout() -> void:
 	if $SpawnTimer.wait_time > min_spawn_interval:
 		$SpawnTimer.wait_time = max(min_spawn_interval, $SpawnTimer.wait_time - spawn_interval_reduction)
-		#print(\"New SpawnTimer interval:\", $SpawnTimer.wait_time)
 "
 
 [node name="Main" type="Node2D" groups=["game_manager"]]
@@ -154,6 +153,7 @@ stream = ExtResource("12_kk8xh")
 [node name="GameBackgroundMusic" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_d4uoo")
 volume_db = -6.117
+parameters/looping = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="on_SpawnTimer_timeout"]
 [connection signal="timeout" from="Message/Timer" to="Message" method="_on_timer_timeout"]

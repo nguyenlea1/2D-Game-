@@ -1,5 +1,9 @@
 extends Node2D
 
+func _ready() -> void:
+	if $IntroMusicContinued and !$IntroMusicContinued.playing:
+		$IntroMusicContinued.play()
+
 func _on_button_pressed():
 	$NextButtonSound.play()
 
